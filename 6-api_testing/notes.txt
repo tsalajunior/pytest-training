@@ -1,0 +1,19 @@
+Folder 6 - API Testing
+
+The client fixture enables Flask testing mode and yields a test client for exercising the app's routes.
+
+test_add_user:
+- Sends a POST request to /users with a new user ID and name.
+- Verifies status 201 and the JSON response containing the new user.
+
+test_get_user:
+- First creates a user through POST /users.
+- Sends GET /users/<id> and verifies status 200 and the returned user JSON.
+
+test_user_not_found:
+- Sends GET /users/<id> for an ID that does not exist.
+- Verifies status 404 and the "User not found!" JSON error.
+
+test_add_duplicate_user:
+- Adds a user, then attempts to add the same ID again.
+- Verifies status 400 and the "User already exists!" JSON error.

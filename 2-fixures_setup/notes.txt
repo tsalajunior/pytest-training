@@ -1,0 +1,11 @@
+Folder 2 - Fixture Setup
+
+The user_manager fixture creates a fresh UserManager instance before each test.
+
+test_add_user:
+- Tests adding a new user to UserManager.
+- Verifies both that add_user() succeeds and that get_user() returns the saved email.
+
+test_add_duplicate_user:
+- Adds a user, then attempts to add the same username with another email.
+- Verifies that the duplicate entry raises a ValueError.

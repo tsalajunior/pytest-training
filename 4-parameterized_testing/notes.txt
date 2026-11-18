@@ -1,0 +1,6 @@
+Folder 4 - Parameterized Testing
+
+test_in_prime:
+- Uses pytest.mark.parametrize to run the test with multiple number and expected-result pairs.
+- Tests in_prime() for values below 2, prime numbers, composite numbers, and boundary cases.
+- Verifies that primes return True and non-primes return False.

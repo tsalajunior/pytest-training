@@ -1,0 +1,16 @@
+Folder 5 - Mocking
+
+test_get_weather:
+- Replaces main.requests.get with a pytest-mock mock.
+- Configures a successful HTTP response and fake weather JSON.
+- Verifies get_weather("Dubai") returns the fake data and calls the expected URL once.
+
+test_save_user:
+- Replaces sqlite3.connect with a mock connection.
+- Calls save_user() with a name and age.
+- Verifies the users database is opened and the expected INSERT statement and values are executed.
+
+test_get_username_with_mock:
+- Creates a mock APIClient with a get_user_data() return value.
+- Injects the mock into UserService.
+- Verifies get_username() converts the fetched name to uppercase and calls get_user_data() with the expected user ID once.

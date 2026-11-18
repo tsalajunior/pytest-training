@@ -1,0 +1,13 @@
+Folder 1 - Basic Pytest
+
+test_get_weather:
+- Tests get_weather() across every temperature range: below 0, 0-19, 20-29, and 30 or above.
+- Verifies the corresponding weather message for each range.
+
+test_add:
+- Tests add() with positive, negative, and zero operands.
+- Verifies that integer addition returns the correct result.
+
+test_divide:
+- Tests divide() with zero as the divisor.
+- Verifies that it raises a ValueError with the message "Cannot divide by zero."

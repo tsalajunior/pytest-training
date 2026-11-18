@@ -1,0 +1,15 @@
+Folder 3 - Fixture Teardown
+
+The db fixture creates a fresh Database instance, provides it to each test, and clears the in-memory data after the test with fixture teardown code.
+
+test_add_user:
+- Adds a user to the database.
+- Verifies that get_user() returns the saved name.
+
+test_add_duplicate_user:
+- Adds a user, then attempts to add another user with the same ID.
+- Verifies that ValueError is raised with the message "User already exists".
+
+test_delete_user:
+- Adds a user and deletes it.
+- Verifies that get_user() returns None after deletion.
